@@ -14,6 +14,7 @@ global.before(function () {
 });
 
 describe('App starts and has correct title and buttons', function () {
+  this.timeout(10000)
   let app;
 
   before(function () {
@@ -41,9 +42,9 @@ describe('App starts and has correct title and buttons', function () {
     expect(openFile).to.exist;
   })
 
-  it.skip('tests the title', function () {
+  it('tests the title', function () {
     return app.client.waitUntilWindowLoaded().getTitle()
-            .should.eventually.equal('');
+            .should.eventually.equal('colorDrop');
   });
 
   it.skip('tests the Open File button text exists', function() {
