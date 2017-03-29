@@ -5,6 +5,8 @@ const expect = require('chai').expect;
 const assert = require('chai').assert;
 const path = require('path');
 
+// const {openFile} =  require('../lib/main.js')
+
 const electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron');
 const appPath = path.join(__dirname, '..');
 
@@ -32,14 +34,13 @@ describe('App starts and has correct title and buttons', function () {
 
 
   it('opens a window', function () {
-    console.log(app)
     return app.client.waitUntilWindowLoaded().getWindowCount()
             .should.eventually.equal(1);
 
   });
 
-  it.skip('should have an open file function', ()=>{
-    expect(openFile).to.exist;
+  it('should have an open file function', ()=>{
+    expect(app.client.openFile).to.exist;
   })
 
   it('tests the title', function () {
