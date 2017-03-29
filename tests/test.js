@@ -30,12 +30,14 @@ describe('App starts and has correct title and buttons', function () {
   });
 
 
-  it.skip('opens a window', function () {
+  it('opens a window', function () {
+    console.log(app)
     return app.client.waitUntilWindowLoaded().getWindowCount()
             .should.eventually.equal(1);
+
   });
 
-  it('should have an open file function', ()=>{
+  it.skip('should have an open file function', ()=>{
     expect(openFile).to.exist;
   })
 
