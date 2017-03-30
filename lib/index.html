@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
-
+    <script>
+        require('electron').ipcRenderer.on('message', (event, message) => {
+          document.querySelector('#history').append(`${message}`);
+        })
+    </script>
 
     <section id="dropper">
       <button id='open-dropper'>dropper</button>
-      <div id='position-color'></div>
+      <div id='position-color'>  </div>
     </section>
     <section id='history'>
     </section>
