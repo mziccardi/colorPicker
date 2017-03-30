@@ -1,0 +1,9 @@
+body {
+  border: 2px solid magenta;
+}
+
+#the-window {
+  width: 100vw;
+  height: 100vh;
+  cursor: crosshair;
+}
