@@ -9,7 +9,10 @@
   <body>
     <script>
         require('electron').ipcRenderer.on('message', (event, message) => {
-          document.querySelector('#history').append(`${message}`);
+          let listItem = document.createElement("LI");
+          listItem.innerHTML = `${message}`;
+          listItem.style.backgroundColor = `#${message}`
+          document.querySelector('#history').appendChild(listItem);
         })
     </script>
 
