@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
     <title>colorDrop</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel='stylesheet' href='style.css' type='text/css'>
   </head>
   <body>
     <script>
         require('electron').ipcRenderer.on('message', (event, message) => {
-          let listItem = document.createElement("LI");
-          listItem.innerHTML = `${message}`;
-          listItem.style.backgroundColor = `#${message}`
+          let listItem= document.createElement('LI');
+          listItem.innerHTML= `${message}`;
+          listItem.style.backgroundColor= `#${message}`
           document.querySelector('#history').appendChild(listItem);
         })
     </script>
 
-    <section id="dropper">
-      <button id='open-dropper'>dropper</button>
-      <button id='clear-em'>clear em</button>
+
+    <section id='dropper'>
+      <div class='banner'>
+        <button id='open-dropper'>Start ColorDrop!</button>
+        <button id='clear-em'>clear em</button>
+      </div>
       <div id='position-color'>  </div>
     </section>
     <section id='history'>
