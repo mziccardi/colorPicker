@@ -7,3 +7,33 @@ body {
   height: 100vh;
   cursor: crosshair;
 }
+
+li {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+}
+
+.banner {
+  height: 40px;
+  background-color:
+}
+
+#open-dropper {
+  height: 30px;
+  width: 50%;
+  margin-left: 20%;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  border: none;
+  background-image: linear-gradient(to right, #849DFF 0%, #9DFF84 51%, #849DFF 100%);
+}
+
+#open-dropper:hover {
+  background-position: right center;
+  /*background-image: linear-gradient(to right, #9DFF84 0%, #849DFF 51%, #9DFF84 100%);*/
+}
