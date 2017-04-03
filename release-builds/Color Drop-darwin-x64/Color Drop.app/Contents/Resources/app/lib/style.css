@@ -1,0 +1,72 @@
+#the-window {
+  cursor: crosshair;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+li {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+}
+
+.banner {
+  height: 120px;
+}
+
+#open-dropper {
+  height: 30px;
+  width: 50%;
+  display: block;
+  margin-left: 20%;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 10px 10px #b5b8b9;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to right, #849DFF 0%, #9DFF84 51%, #849DFF 100%);
+}
+
+
+#quit {
+  height: 30px;
+  width: 20%;
+  margin-left: 20%;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  box-shadow: 0 10px 10px #b5b8b9;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to right, #546362 0%, #dde3e3 51%, #546362 100%);
+}
+
+#clear-em {
+  height: 30px;
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  box-shadow: 0 10px 10px #b5b8b9;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to right, #dde3e3 0%, #546362 51%, #dde3e3 100%);
+}
+
+#open-dropper:hover, #quit:hover, #clear-em:hover {
+  background-position: right center;
+}

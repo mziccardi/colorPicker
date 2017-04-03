@@ -9,10 +9,12 @@
   <body>
     <script>
         require('electron').ipcRenderer.on('message', (event, message) => {
-          let listItem= document.createElement('LI');
-          listItem.innerHTML= `${message}`;
-          listItem.style.backgroundColor= `#${message}`
-          document.querySelector('#history').appendChild(listItem);
+          let historyItem = document.createElement('div')
+          historyItem.innerHTML = `
+            <div style='display: inline-block; background-color: #${message}; width: 50%; height: 20px; margin-left: 20%;'></div>
+            <div style='display: inline-block; width: 50%; font-family:Arial; margin-left: 40%;'>${message}</div>`
+          console.log(historyItem);
+          document.querySelector('#history').appendChild(historyItem);
         })
     </script>
 
@@ -20,7 +22,8 @@
     <section id='dropper'>
       <div class='banner'>
         <button id='open-dropper'>Start ColorDrop!</button>
-        <button id='clear-em'>clear em</button>
+        <button id='clear-em'>Clear Em</button>
+        <button id='quit'>Quit</button>
       </div>
       <div id='position-color'>  </div>
     </section>
